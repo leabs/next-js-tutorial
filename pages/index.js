@@ -36,7 +36,6 @@ export default function Home({ allPostsData }) {
         <a href="https://www.upwork.com/o/profiles/users/~011442e16729fe0928/" target="_blank" class="has-text-primary">Upwork</a>
       </section>
 
-      <section className={utilStyles.headingMd}>…</section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
