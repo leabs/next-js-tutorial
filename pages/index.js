@@ -5,7 +5,6 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 
-
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -15,7 +14,6 @@ export async function getStaticProps() {
   }
 }
 
-
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -23,17 +21,21 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>
-        Front-end web developer with over 3+ years professional experience. I specialize in custom styling, fast secure static websites, and custom Wordpress sites. 
-
-        </p>
-        <a href="https://github.com/leabs" target="_blank" class="has-text-primary">GitHub</a>
+        <div className={utilStyles.socialLinks}>
+        
+      <a href="https://github.com/leabs" target="_blank" class="has-text-primary">GitHub</a>
         <span> | </span>
         <a href="https://codepen.io/leab" target="_blank" class="has-text-primary">CodePen</a>
         <span> | </span>
         <a href="https://www.linkedin.com/in/stevenleabo/" target="_blank" class="has-text-primary">LinkedIn</a>
         <span> | </span>
         <a href="https://www.upwork.com/o/profiles/users/~011442e16729fe0928/" target="_blank" class="has-text-primary">Upwork</a>
+        </div>
+        <p>
+        Front-end web developer with over 3+ years professional experience. I specialize in custom styling, fast secure static websites, and custom Wordpress sites. 
+
+        </p>
+        
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
