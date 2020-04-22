@@ -21,6 +21,12 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+        
+        <p>
+        Front-end web developer with over 3+ years professional experience. I specialize in custom styling, fast secure static websites, and custom Wordpress sites. 
+
+        </p>
+
         <div className={utilStyles.socialLinks}>
         
       <a href="https://github.com/leabs" target="_blank" class="has-text-primary">GitHub</a>
@@ -31,10 +37,6 @@ export default function Home({ allPostsData }) {
         <span> | </span>
         <a href="https://www.upwork.com/o/profiles/users/~011442e16729fe0928/" target="_blank" class="has-text-primary">Upwork</a>
         </div>
-        <p>
-        Front-end web developer with over 3+ years professional experience. I specialize in custom styling, fast secure static websites, and custom Wordpress sites. 
-
-        </p>
         
       </section>
 
