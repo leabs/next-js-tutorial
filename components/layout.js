@@ -55,7 +55,7 @@ export default function Layout({ children, home }) {
     </div>
     <div className={styles.container} style={{ marginBottom: '0'}}>
     <footer className="footer">
-    <div className={utilStyles.socialLinks}>
+    <div className={utilStyles.socialLinks} style={{ textAlign:"center"}}>
     <a rel="noopener" href="https://github.com/leabs" target="_blank" className="has-text-primary">GitHub</a>
       <span> | </span>
       <a rel="noopener" href="https://codepen.io/leab" target="_blank" className="has-text-primary">CodePen</a>
