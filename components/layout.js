@@ -11,6 +11,8 @@ export default function Layout({ children, home }) {
     <div>
     <div className={styles.container} style={{ minHeight: '80vh'}}>
       <Head>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet"> 
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
