@@ -8,25 +8,26 @@ export const siteTitle = 'Steven Leabo - Web Developer'
 
 export default function Layout({ children, home }) {
   return (
-    <div>
+  <div>
     <div className={styles.container} style={{ minHeight: '80vh'}}>
       <Head>
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      < link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content=" Landing Page for Steven Leabo - Web Developer"
         />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
+      {!home && (
+        <div className={styles.backToHome}>
+          <Link href="/">
+            <a>← Back home</a>
+          </Link>
+        </div>
+      )}
       <header className={styles.header}>
         {home ? (
           <>
@@ -50,13 +51,6 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back home</a>
-          </Link>
-        </div>
-      )}
       <main>{children}</main>
     </div>
     <div className={styles.container} style={{ marginBottom: '0'}}>
