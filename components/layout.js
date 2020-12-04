@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { Button, Navbar, Alignment } from "@blueprintjs/core";
 
 const name = "Steven Leabo - Web Developer";
 export const siteTitle = "Steven Leabo - Web Developer";
@@ -9,6 +10,13 @@ export const siteTitle = "Steven Leabo - Web Developer";
 export default function Layout({ children, home }) {
     return (
         <div>
+            <Navbar align={Alignment.CENTER}>
+                <Navbar.Heading>
+                    <h1 style={{ textAlign: "center" }} className="bp3-heading">
+                        Steven Leabo - Web Developer
+                    </h1>
+                </Navbar.Heading>
+            </Navbar>
             <div className={styles.container} style={{ minHeight: "75vh" }}>
                 <Head>
                     <link
@@ -25,28 +33,22 @@ export default function Layout({ children, home }) {
                         name="description"
                         content=" Landing Page for Steven Leabo - Web Developer"
                     />
+                    <link
+                        href="../node_modules/normalize.css/normalize.css"
+                        rel="stylesheet"
+                    />
+                    <link
+                        href="../node_modules/@blueprintjs/icons/lib/css/blueprint-icons.css"
+                        rel="stylesheet"
+                    />
+                    <link
+                        href="path/to/node_modules/@blueprintjs/core/lib/css/blueprint.css"
+                        rel="stylesheet"
+                    />
                     <meta name="og:title" content={siteTitle} />
                     <meta name="twitter:card" content="summary_large_image" />
                 </Head>
-                <header className={styles.header}>
-                    {home ? (
-                        <>
-                            <Link href="/">
-                                <h1 className={utilStyles.heading2Xl}>
-                                    Steven Leabo - Web Developer
-                                </h1>
-                            </Link>
-                        </>
-                    ) : (
-                        <>
-                            <Link href="/">
-                                <h2 className={utilStyles.heading2Xl}>
-                                    Steven Leabo - Web Developer
-                                </h2>
-                            </Link>
-                        </>
-                    )}
-                </header>
+                <header className={styles.header}></header>
                 <main>{children}</main>
                 {!home && (
                     <div className={styles.backToHome}>
