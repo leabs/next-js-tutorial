@@ -8,7 +8,8 @@ export const siteTitle = 'Steven Leabo - Web Developer'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div>
+    <div className={styles.container} style={{ minHeight: '80vh'}}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -24,36 +25,51 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
       <header className={styles.header}>
         {home ? (
           <>
             <Link href="/">
-              <a>
+              <h1>
               Steven Leabo - Web Developer
-              </a>
+              
+              </h1>
             </Link>
             
           </>
         ) : (
           <>
             <Link href="/">
-              <a>
+              <h2>
               Steven Leabo - Web Developer
-              </a>
+              
+              </h2>
             </Link>
            
           </>
         )}
       </header>
+      {!home && (
+        <div className={styles.backToHome}>
+          <Link href="/">
+            <a>← Back home</a>
+          </Link>
+        </div>
+      )}
       <main>{children}</main>
-      
+    </div>
+    <div className={styles.container} style={{ marginBottom: '0'}}>
+    <footer className="footer">
+    <div className={utilStyles.socialLinks}>
+    <a href="https://github.com/leabs" target="_blank" class="has-text-primary">GitHub</a>
+      <span> | </span>
+      <a href="https://codepen.io/leab" target="_blank" class="has-text-primary">CodePen</a>
+      <span> | </span>
+      <a href="https://www.linkedin.com/in/stevenleabo/" target="_blank" class="has-text-primary">LinkedIn</a>
+      <span> | </span>
+      <a href="https://www.upwork.com/o/profiles/users/~011442e16729fe0928/" target="_blank" class="has-text-primary">Upwork</a>
+      </div>
+    </footer>
+    </div>
     </div>
   )
 }
