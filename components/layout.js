@@ -62,13 +62,13 @@ export default function Layout({ children, home }) {
     <div className={styles.container} style={{ marginBottom: '0'}}>
     <footer className="footer">
     <div className={utilStyles.socialLinks}>
-    <a href="https://github.com/leabs" target="_blank" class="has-text-primary">GitHub</a>
+    <a rel="noopener" href="https://github.com/leabs" target="_blank" className="has-text-primary">GitHub</a>
       <span> | </span>
-      <a href="https://codepen.io/leab" target="_blank" class="has-text-primary">CodePen</a>
+      <a rel="noopener" href="https://codepen.io/leab" target="_blank" className="has-text-primary">CodePen</a>
       <span> | </span>
-      <a href="https://www.linkedin.com/in/stevenleabo/" target="_blank" class="has-text-primary">LinkedIn</a>
+      <a rel="noopener" href="https://www.linkedin.com/in/stevenleabo/" target="_blank" className="has-text-primary">LinkedIn</a>
       <span> | </span>
-      <a href="https://www.upwork.com/o/profiles/users/~011442e16729fe0928/" target="_blank" class="has-text-primary">Upwork</a>
+      <a rel="noopener" href="https://www.upwork.com/o/profiles/users/~011442e16729fe0928/" target="_blank" className="has-text-primary">Upwork</a>
       </div>
     </footer>
     </div>
