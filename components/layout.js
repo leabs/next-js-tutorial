@@ -9,13 +9,6 @@ export const siteTitle = 'Steven Leabo - Web Developer'
 export default function Layout({ children, home }) {
   return (
   <div>
-    <div class="stripes">
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-         <span></span>
-      </div>
     <div className={styles.container} style={{ minHeight: '80vh'}}>
       <Head>
       < link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
