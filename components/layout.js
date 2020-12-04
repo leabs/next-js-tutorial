@@ -11,8 +11,7 @@ export default function Layout({ children, home }) {
     <div>
     <div className={styles.container} style={{ minHeight: '80vh'}}>
       <Head>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -27,11 +26,12 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <header className={styles.header}>
         {home ? (
           <>
             <Link href="/">
-              <h1>
+              <h1 className={utilStyles.headingXl}>
               Steven Leabo - Web Developer
               
               </h1>
@@ -41,7 +41,7 @@ export default function Layout({ children, home }) {
         ) : (
           <>
             <Link href="/">
-              <h2>
+              <h2 className={utilStyles.headingLg}>
               Steven Leabo - Web Developer
               
               </h2>
@@ -72,6 +72,6 @@ export default function Layout({ children, home }) {
       </div>
     </footer>
     </div>
-    </div>
+  </div>
   )
 }
