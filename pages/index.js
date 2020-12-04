@@ -4,6 +4,20 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import * as Sentry from "@sentry/react"
+import { Integrations } from "@sentry/tracing"
+
+Sentry.init({
+  dsn: "https://6bf06797ba1142bd94951510f04b62da@o167874.ingest.sentry.io/1242251",
+  integrations: [
+    new Integrations.BrowserTracing(),
+  ],
+
+  // We recommend adjusting this value in production, or using tracesSampler
+  // for finer control
+  tracesSampleRate: 1.0,
+});
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
