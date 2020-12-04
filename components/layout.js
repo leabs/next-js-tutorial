@@ -3,8 +3,8 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Shadow Stack, LLC'
-export const siteTitle = 'Shadow Stack, LLC'
+const name = 'Steven Leabo - Web Developer'
+export const siteTitle = 'Steven Leabo - Web Developer'
 
 export default function Layout({ children, home }) {
   return (
@@ -13,7 +13,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content=" Landing Page for Shadow Stack, LLC"
+          content=" Landing Page for Steven Leabo - Web Developer"
         />
         <meta
           property="og:image"
@@ -24,12 +24,19 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      {!home && (
+        <div className={styles.backToHome}>
+          <Link href="/">
+            <a>← Back to home</a>
+          </Link>
+        </div>
+      )}
       <header className={styles.header}>
         {home ? (
           <>
             <Link href="/">
               <a>
-              Shadow Stack, LLC
+              Steven Leabo - Web Developer
               </a>
             </Link>
             
@@ -38,7 +45,7 @@ export default function Layout({ children, home }) {
           <>
             <Link href="/">
               <a>
-              Shadow Stack, LLC
+              Steven Leabo - Web Developer
               </a>
             </Link>
            
@@ -46,13 +53,7 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      
     </div>
   )
 }
