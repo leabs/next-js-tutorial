@@ -31,7 +31,7 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
             <Link href="/">
-              <h1 className={utilStyles.headingXl}>
+              <h1 className={utilStyles.heading2Xl}>
               Steven Leabo - Web Developer
               
               </h1>
