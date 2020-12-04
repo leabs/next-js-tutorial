@@ -9,6 +9,13 @@ export const siteTitle = 'Steven Leabo - Web Developer'
 export default function Layout({ children, home }) {
   return (
   <div>
+    <div class="stripes">
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
     <div className={styles.container} style={{ minHeight: '80vh'}}>
       <Head>
       < link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -21,13 +28,6 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back home</a>
-          </Link>
-        </div>
-      )}
       <header className={styles.header}>
         {home ? (
           <>
@@ -51,7 +51,15 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main>
+      {children}</main>
+      {!home && (
+        <div className={styles.backToHome}>
+          <Link href="/">
+            <a>← Back home</a>
+          </Link>
+        </div>
+      )}
     </div>
     <div className={styles.container} style={{ marginBottom: '0'}}>
     <footer className="footer">

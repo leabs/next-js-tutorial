@@ -5,8 +5,6 @@ category: React
 date: "2020-08-15"
 ---
 
-![Storybook relationship](https://storybook.js.org/3b2d67d88d14b230ce1a1e7eebbf4028/storybook-relationship.png "Storybook work flow")
-
 I've been using Storybook at my current gig to mock up component / widget UI for a React app.
 
 Storybook is a way to create components in isolation. From there you can import base styles and container properties to render the components in the app. You have a variety of tools at your disposal to:
