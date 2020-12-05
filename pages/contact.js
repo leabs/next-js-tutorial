@@ -23,7 +23,7 @@ export default function Contact() {
                         placeholder="Nice site brother"
                     />
                 </FormGroup>
-                <Button icon="send-message">Send</Button>
+                <a><Button icon="send-message">Send</Button></a>{ ' ' }<a href="../"><Button icon="home" className="bp3-intent-danger">Home</Button></a>
             </Layout>
         </div>
     );
